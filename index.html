@@ -3,158 +3,611 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>ASVERA — Extrait de Parfum</title>
-<meta name="description" content="ASVERA — Extrait de Parfum. Leave a mark, not just a scent.">
+
+<meta name="description"
+content="ASVERA — Extrait de Parfum. Leave a mark, not just a scent.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#050505;
+    color:#f5f0e8;
+    font-family:'Montserrat',sans-serif;
+}
 
 :root{
-  --black:#050505; --soft:#0b0b0b; --gold:#d4af57; --gold2:#f0d58b;
-  --white:#f4f1e9; --muted:#aaa59a; --line:rgba(212,175,87,.24);
+    --gold:#d4af57;
+    --gold-light:#f0d58b;
+    --black:#050505;
+    --soft:#111111;
+    --white:#f5f0e8;
 }
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:var(--black);color:var(--white);font-family:Montserrat,Arial,sans-serif;line-height:1.7}
-a{text-decoration:none;color:inherit}
-nav{position:fixed;top:0;left:0;right:0;z-index:20;height:82px;display:flex;align-items:center;justify-content:space-between;padding:0 6vw;background:rgba(5,5,5,.78);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-.brand{font-family:"Cormorant Garamond",serif;font-size:32px;letter-spacing:9px;color:var(--gold);font-weight:600}
-.links{display:flex;gap:38px;text-transform:uppercase;font-size:12px;letter-spacing:3px}
-.links a{color:#e7e2d8;transition:.25s}.links a:hover{color:var(--gold)}
-.hero{min-height:100vh;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;padding:130px 8vw 70px;position:relative;overflow:hidden}
-.hero:before{content:"";position:absolute;width:650px;height:650px;right:-170px;top:110px;background:radial-gradient(circle,rgba(212,175,87,.17),transparent 68%);filter:blur(8px)}
-.eyebrow{font-size:12px;letter-spacing:6px;color:var(--gold);text-transform:uppercase;margin-bottom:24px}
-h1{font-family:"Cormorant Garamond",serif;font-size:clamp(76px,10vw,145px);line-height:.82;letter-spacing:5px;color:var(--gold);font-weight:500}
-.tag{font-family:"Cormorant Garamond",serif;font-size:31px;line-height:1.05;letter-spacing:5px;text-transform:uppercase;margin:28px 0 22px;max-width:620px}
-.copy{color:var(--muted);max-width:550px;font-size:14px}
-.cta{display:inline-flex;margin-top:34px;padding:14px 28px;border:1px solid var(--gold);color:var(--gold);letter-spacing:3px;text-transform:uppercase;font-size:11px;transition:.3s}
-.cta:hover{background:var(--gold);color:#050505}
-.hero-bottle{display:flex;justify-content:center;align-items:center;min-height:600px;position:relative}
-.hero-bottle img{width:min(420px,80%);max-height:610px;object-fit:contain;filter:drop-shadow(0 25px 35px rgba(0,0,0,.9));transform:translateY(10px)}
-.section{padding:110px 8vw;border-top:1px solid var(--line)}
-.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:55px}
-.kicker{color:var(--gold);font-size:11px;letter-spacing:5px;text-transform:uppercase}
-h2{font-family:"Cormorant Garamond",serif;font-size:62px;font-weight:500;line-height:1;color:#eee8db;margin-top:12px}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
-.about-grid p{color:var(--muted);font-size:14px;max-width:620px}
-.quote{font-family:"Cormorant Garamond",serif;color:var(--gold2);font-size:35px;line-height:1.15;border-left:1px solid var(--gold);padding-left:28px}
-.notes{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line)}
-.note{padding:35px;min-height:190px;border-right:1px solid var(--line)}.note:last-child{border-right:0}
-.note span{display:block;color:var(--gold);font-size:10px;letter-spacing:4px;text-transform:uppercase;margin-bottom:18px}
-.note h3{font-family:"Cormorant Garamond",serif;font-size:32px;font-weight:500;margin-bottom:8px}
-.note p{color:var(--muted);font-size:13px}
-.profile{display:grid;grid-template-columns:1fr 1fr;gap:70px}
-.stat{padding:22px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;color:var(--muted);font-size:12px;letter-spacing:2px;text-transform:uppercase}
-.stat strong{color:var(--gold);font-weight:500}
-.contact{display:grid;grid-template-columns:1fr 1fr;gap:80px}
-.contact-box{border:1px solid var(--line);padding:42px}
-.contact-row{padding:18px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:25px;font-size:13px}
-.contact-row span:first-child{color:var(--gold);letter-spacing:2px;text-transform:uppercase;font-size:10px}
-footer{padding:35px 8vw;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:#777;font-size:10px;letter-spacing:2px;text-transform:uppercase}
-@media(max-width:850px){
- nav{height:70px;padding:0 5vw}.brand{font-size:25px;letter-spacing:6px}.links{gap:12px;font-size:9px;letter-spacing:1px}
- .hero{grid-template-columns:1fr;padding:120px 7vw 50px}.hero-bottle{min-height:470px}.hero-bottle img{width:330px}
- .about-grid,.profile,.contact{grid-template-columns:1fr;gap:40px}.notes{grid-template-columns:1fr}.note{border-right:0;border-bottom:1px solid var(--line)}.note:last-child{border-bottom:0}
- h2{font-size:48px}.section{padding:80px 7vw}.tag{font-size:25px}
- footer{flex-direction:column;gap:10px}
+
+/* NAVBAR */
+
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 7%;
+
+    background:rgba(5,5,5,.88);
+    backdrop-filter:blur(12px);
+
+    border-bottom:1px solid rgba(212,175,87,.15);
 }
+
+.logo{
+    color:var(--gold);
+    font-family:'Cormorant Garamond',serif;
+    font-size:28px;
+    letter-spacing:7px;
+    font-weight:600;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:32px;
+}
+
+nav a{
+    color:#ddd;
+    text-decoration:none;
+    font-size:12px;
+    letter-spacing:2px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:var(--gold);
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    padding-top:80px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:#050505;
+}
+
+.hero img{
+    width:100%;
+    height:calc(100vh - 80px);
+
+    object-fit:cover;
+    display:block;
+}
+
+/* SECTION */
+
+section{
+    padding:100px 8%;
+}
+
+.section-title{
+    text-align:center;
+    color:var(--gold);
+    font-family:'Cormorant Garamond',serif;
+    font-size:46px;
+    letter-spacing:5px;
+    margin-bottom:20px;
+}
+
+.section-subtitle{
+    text-align:center;
+    color:#aaa;
+    max-width:650px;
+    margin:0 auto 60px;
+    line-height:1.8;
+    font-size:14px;
+}
+
+/* ABOUT */
+
+.about{
+    background:
+    linear-gradient(rgba(5,5,5,.94),rgba(5,5,5,.94)),
+    url('asvera-bottle.png');
+
+    background-size:500px;
+    background-position:right center;
+    background-repeat:no-repeat;
+}
+
+.about-content{
+    max-width:850px;
+    margin:auto;
+    text-align:center;
+}
+
+.about-content p{
+    color:#c9c9c9;
+    line-height:2;
+    font-size:15px;
+}
+
+/* VALUES */
+
+.values{
+    background:#0b0b0b;
+}
+
+.cards{
+    max-width:1100px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:18px;
+}
+
+.card{
+    padding:35px 20px;
+    text-align:center;
+
+    border:1px solid rgba(212,175,87,.25);
+    background:#080808;
+
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-7px);
+    border-color:var(--gold);
+}
+
+.card-icon{
+    font-size:30px;
+    color:var(--gold);
+    margin-bottom:18px;
+}
+
+.card h3{
+    color:var(--gold-light);
+    font-family:'Cormorant Garamond',serif;
+    font-size:23px;
+    letter-spacing:2px;
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#888;
+    font-size:12px;
+}
+
+/* FRAGRANCE */
+
+.fragrance{
+    background:#050505;
+}
+
+.fragrance-box{
+    max-width:1000px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+
+    border:1px solid rgba(212,175,87,.2);
+}
+
+.fragrance-image{
+    min-height:450px;
+
+    background:
+    linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.3)),
+    url('asvera-bottle.png');
+
+    background-size:cover;
+    background-position:center;
+}
+
+.fragrance-info{
+    padding:55px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.fragrance-info h3{
+    color:var(--gold);
+    font-family:'Cormorant Garamond',serif;
+    font-size:38px;
+    letter-spacing:3px;
+    margin-bottom:20px;
+}
+
+.fragrance-info p{
+    color:#aaa;
+    line-height:1.9;
+    font-size:14px;
+}
+
+.notes{
+    margin-top:30px;
+}
+
+.notes span{
+    display:inline-block;
+    padding:8px 14px;
+    margin:4px;
+
+    border:1px solid rgba(212,175,87,.3);
+
+    color:#d5d5d5;
+    font-size:11px;
+    letter-spacing:1px;
+}
+
+/* BRAND */
+
+.brand{
+    background:#0b0b0b;
+    text-align:center;
+}
+
+.tagline{
+    color:var(--gold);
+    font-family:'Cormorant Garamond',serif;
+    font-size:52px;
+    letter-spacing:5px;
+    line-height:1.1;
+    max-width:800px;
+    margin:auto;
+}
+
+/* CONTACT */
+
+.contact{
+    text-align:center;
+    background:#050505;
+}
+
+.contact p{
+    color:#999;
+    margin:10px;
+}
+
+.contact-email{
+    color:var(--gold);
+    font-size:16px;
+}
+
+/* FOOTER */
+
+footer{
+    padding:40px 20px;
+    text-align:center;
+
+    border-top:1px solid rgba(212,175,87,.15);
+
+    color:#777;
+    font-size:11px;
+    letter-spacing:2px;
+}
+
+.footer-logo{
+    color:var(--gold);
+    font-family:'Cormorant Garamond',serif;
+    font-size:25px;
+    letter-spacing:6px;
+    margin-bottom:15px;
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+    nav{
+        padding:18px 5%;
+    }
+
+    .logo{
+        font-size:21px;
+        letter-spacing:4px;
+    }
+
+    nav ul{
+        gap:12px;
+    }
+
+    nav a{
+        font-size:9px;
+        letter-spacing:1px;
+    }
+
+    .hero{
+        padding-top:70px;
+    }
+
+    .hero img{
+        height:auto;
+        min-height:0;
+        object-fit:contain;
+    }
+
+    section{
+        padding:70px 6%;
+    }
+
+    .section-title{
+        font-size:36px;
+    }
+
+    .cards{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .fragrance-box{
+        grid-template-columns:1fr;
+    }
+
+    .fragrance-image{
+        min-height:350px;
+    }
+
+    .fragrance-info{
+        padding:35px 25px;
+    }
+
+    .tagline{
+        font-size:35px;
+    }
+}
+
+@media(max-width:500px){
+
+    nav ul{
+        display:none;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .hero img{
+        width:100%;
+    }
+}
+
 </style>
 </head>
+
 <body>
 
+<!-- NAVIGATION -->
+
 <nav>
-  <a class="brand" href="#home">ASVERA</a>
-  <div class="links">
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#perfume">Perfume</a>
-    <a href="#notes">Notes</a>
-    <a href="#contact">Contact</a>
-  </div>
+
+    <div class="logo">ASVERA</div>
+
+    <ul>
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#fragrance">FRAGRANCE</a></li>
+        <li><a href="#brand">BRAND</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+    </ul>
+
 </nav>
 
-<main>
+
+<!-- HERO -->
+
 <section class="hero" id="home">
-  <div>
-    <div class="eyebrow">Extrait de Parfum</div>
-    <h1>ASVERA</h1>
-    <div class="tag">Leave a mark.<br>Not just a scent.</div>
-    <p class="copy">A signature fragrance created for those who value confidence, elegance and timeless presence.</p>
-    <a class="cta" href="#perfume">Discover ASVERA</a>
-  </div>
-  <div class="hero-bottle">
-    <img src="asvera-bottle.png" alt="ASVERA Extrait de Parfum bottle">
-  </div>
+
+    <img src="coming-soon.png"
+         alt="ASVERA Coming Soon">
+
 </section>
 
-<section class="section" id="about">
-  <div class="section-head">
-    <div><div class="kicker">01 — The House</div><h2>More than a fragrance.</h2></div>
-  </div>
-  <div class="about-grid">
-    <p>ASVERA is an expression of identity, confidence and timeless luxury. Crafted for those who lead with presence and leave a lasting impression. Every detail is designed to feel refined, quiet and unmistakably ASVERA.</p>
-    <div class="quote">“Confidence is remembered.<br>So is the scent.”</div>
-  </div>
-</section>
 
-<section class="section" id="perfume">
-  <div class="section-head">
-    <div><div class="kicker">02 — Signature</div><h2>Origin</h2></div>
-  </div>
-  <div class="profile">
-    <div>
-      <p class="copy">A dark, elegant fragrance profile built around a warm opening, a refined floral heart and a rich, lasting base.</p>
-      <div class="stat"><span>Style</span><strong>Elegant</strong></div>
-      <div class="stat"><span>Character</span><strong>Confident</strong></div>
-      <div class="stat"><span>Season</span><strong>All Seasons</strong></div>
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+    <h2 class="section-title">THE ASVERA STORY</h2>
+
+    <p class="section-subtitle">
+        More than a fragrance. An expression of identity,
+        confidence and timeless luxury.
+    </p>
+
+    <div class="about-content">
+
+        <p>
+            ASVERA is created for those who believe that a fragrance
+            should be remembered. Every detail represents confidence,
+            elegance and individuality.
+        </p>
+
+        <br>
+
+        <p>
+            Our philosophy is simple:
+            <strong>Leave a mark, not just a scent.</strong>
+        </p>
+
     </div>
-    <div>
-      <div class="stat"><span>Top</span><strong>Pineapple · Bergamot</strong></div>
-      <div class="stat"><span>Middle</span><strong>Rose · Patchouli</strong></div>
-      <div class="stat"><span>Base</span><strong>Amber · Musk · Vanilla</strong></div>
-    </div>
-  </div>
+
 </section>
 
-<section class="section" id="notes">
-  <div class="section-head">
-    <div><div class="kicker">03 — The Composition</div><h2>Notes</h2></div>
-  </div>
-  <div class="notes">
-    <div class="note"><span>Top Notes</span><h3>Pineapple</h3><p>Bright, fresh and instantly inviting.</p></div>
-    <div class="note"><span>Middle Notes</span><h3>Rose & Patchouli</h3><p>Elegant depth with a refined floral character.</p></div>
-    <div class="note"><span>Base Notes</span><h3>Amber & Vanilla</h3><p>Warm, smooth and memorable on the skin.</p></div>
-  </div>
+
+<!-- VALUES -->
+
+<section class="values">
+
+    <h2 class="section-title">OUR VALUES</h2>
+
+    <p class="section-subtitle">
+        Everything behind ASVERA is built around these five principles.
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="card-icon">♕</div>
+            <h3>Luxury</h3>
+            <p>Elegant details with a premium identity.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">✦</div>
+            <h3>Quality</h3>
+            <p>Focused on quality and lasting impressions.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">♟</div>
+            <h3>Confidence</h3>
+            <p>A fragrance made to express presence.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">◇</div>
+            <h3>Elegance</h3>
+            <p>Timeless design without unnecessary noise.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">∞</div>
+            <h3>Timeless</h3>
+            <p>A signature designed to stay memorable.</p>
+        </div>
+
+    </div>
+
 </section>
 
-<section class="section">
-  <div class="section-head">
-    <div><div class="kicker">04 — Identity</div><h2>The ASVERA Standard</h2></div>
-  </div>
-  <div class="about-grid">
-    <div class="quote">Luxury · Quality · Confidence · Elegance · Timeless</div>
-    <p class="copy">From the bottle to the smallest detail, ASVERA keeps one visual language: deep black, warm gold, clean typography and a strong signature mark.</p>
-  </div>
+
+<!-- FRAGRANCE -->
+
+<section class="fragrance" id="fragrance">
+
+    <h2 class="section-title">ORIGIN</h2>
+
+    <p class="section-subtitle">
+        The beginning of the ASVERA fragrance journey.
+    </p>
+
+    <div class="fragrance-box">
+
+        <div class="fragrance-image"></div>
+
+        <div class="fragrance-info">
+
+            <h3>ORIGIN</h3>
+
+            <p>
+                A sophisticated fragrance created for those
+                who want their presence to be remembered.
+                Rich character, elegant depth and a distinctive
+                ASVERA identity.
+            </p>
+
+            <div class="notes">
+
+                <span>CITRUS</span>
+                <span>FLORAL</span>
+                <span>WOODY</span>
+                <span>AMBER</span>
+                <span>VANILLA</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
 </section>
 
-<section class="section" id="contact">
-  <div class="section-head">
-    <div><div class="kicker">05 — Contact</div><h2>Connect with ASVERA.</h2></div>
-  </div>
-  <div class="contact">
-    <div class="contact-box">
-      <div class="contact-row"><span>Phone</span><strong>0320 9765788</strong></div>
-      <div class="contact-row"><span>Location</span><strong>Kamra, Attock</strong></div>
+
+<!-- BRAND -->
+
+<section class="brand" id="brand">
+
+    <h2 class="section-title">OUR SIGNATURE</h2>
+
+    <div class="tagline">
+
+        LEAVE A MARK.<br>
+        NOT JUST A SCENT.
+
     </div>
-    <div>
-      <p class="copy">For product information, availability and future ASVERA updates, contact us directly. Official social and email channels will be added when they are ready.</p>
-    </div>
-  </div>
+
 </section>
-</main>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+    <h2 class="section-title">STAY TUNED</h2>
+
+    <p>
+        ASVERA — Extrait de Parfum
+    </p>
+
+    <p class="contact-email">
+        info@asvera.com
+    </p>
+
+    <p>
+        Follow the journey @asvera.official
+    </p>
+
+</section>
+
+
+<!-- FOOTER -->
 
 <footer>
-  <span>ASVERA — Extrait de Parfum</span>
-  <span>Leave a mark, not just a scent.</span>
+
+    <div class="footer-logo">
+        ASVERA
+    </div>
+
+    <p>
+        EXTRAIТ DE PARFUM
+    </p>
+
+    <br>
+
+    <p>
+        © 2026 ASVERA. All Rights Reserved.
+    </p>
+
 </footer>
+
 </body>
 </html>
